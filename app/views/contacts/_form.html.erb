@@ -1,0 +1,18 @@
+<% if @contact.errors.any? %>
+  <h3>Please correct these problems:</h3>
+    <ul>
+      <% @contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+<% end %>
+
+<%= form_for @contact do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :phone %>
+  <%= f.text_field :phone %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.submit %>
+<% end %>  

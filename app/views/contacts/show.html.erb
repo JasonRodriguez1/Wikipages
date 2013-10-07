@@ -1,0 +1,11 @@
+<h1><%= @contact.name %></h1>
+
+<p> Phone: <%= @contact.phone %></p>
+<p> Email: <%= @contact.email %></p>
+
+<p><%= link_to 'Edit this contact', edit_contact_path(@contact) %> </p>
+<p><%= link_to 'Delete this contact',
+                @contact,
+                :method => :delete,
+                :data => { :confirm => 'Are you sure broda?' } %></p>
+<p><%= link_to 'Return to contact listing', contacts_path %> </p>
